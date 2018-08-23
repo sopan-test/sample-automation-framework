@@ -1,0 +1,932 @@
+﻿Taiwan.Credentials:
+ QA:
+  RMSLoginUserName: productdiscountonly@mail.rakuten.com
+  RMSLoginUserPassword: automation01
+  ShopName: productdiscountonly
+  CookieName: RMSSC_e7cc3e187f0987859e60d11917826fbd96d8551ef5c3a927211b8a78aa61ace0
+  CookieValue: ImIyVnljbVZaUzJkdlMzbGhUbkYzVW0xSGNVaFJhbmMzVlZSNmVHUlZabGcxZUVsdWNVaFJOVWRLUVVOc2IyeGxRbEZhWjBZdmVVWllhWFZuTDFRcmFHVlRUamhxWTFoamRIUnBhMnByZFdKc1QwdzFWVVp4VG1OQmVuTnFNa1ExYVdaYVZteERlaTlMYUZGbVJrUk1UV3AwUTNwaFdtSTFaVFpwUjFCVlZIQm1jVVZWVW5CVFVpOHphRU5CUnpGdlFrNXJTa1pyTWtRMlFVaFZNMmhRYTAwMWQwaFNUSHBZUWxKeGRsSjNla0pzV0ZWUGIyOWtjRVprUVhaclkxWjJMUzB4YUVSSGNqUk5UbGxHWWxWUFpIaHZTU3RpVVhOQlBUMD0tLWI1M2FlOTVlODc3MTYxNDFlNTNmZjdhZTIyZTY1MzdjNjQ3MDlmODgi--ff2d5423c16649cc7579fb4d7823ae8bb27b18cf
+  MallLoginUserName: productdiscountauto
+  MallLoginUserPassword: automation01
+ QFE:
+  RMSLoginUserName: qfeproductdiscountshop@mail.rakuten.com
+  RMSLoginUserPassword: automation01
+  ShopName: qfeproductdiscountshop
+  CookieName: RMSSC_535488490d305f79800fdce1273f14002dcbe5202caa5e99483ec2e7d114bc70
+  CookieValue: IlR6WklTVEUxT1dWMFZXeExhMk5uUzJWSlRESkRVRzVXY2l0UFpubFhZamw2UkZGM1MzUndXV1JQZEU5bmNtRlZSVGhhZDFrMldWTlNWSFZVUVZaNFNXeFVLMVJUUzJkeFN6ZEhLekphU0dsSWFuTXhWblZCWjFWYWRrSmpXVTQzUzBkT01rbzNlVkJUUkZRdlJtTldXWEp3U1RGU1FqTTFXV04xVlZGaGNXazFjVmRGTURBemVrTTVOM1JOWTBKc1duUlpjVXhGSzFGTlZXVm9ORlJVUTIwNGJsWk5XR0pxWmtSRVdVMHlWbTl5WlN0TWJubEdUamhXU0V0SlNVbGFMUzF3WTJ0dE9DOTBOVW81YWl0RWVWcHhWVVZpY2pablBUMD0tLWNkNDA5MDI2MzdiNWZkZTA2MTVlNDVmNzg3MGZjMWEwZjU5ODQ2ZTAi--b7aca3fab9c3af289d3fb09f6abd41a2a288327f
+  MallLoginUserName: productdiscount
+  MallLoginUserPassword: automation01
+
+US.Credentials:
+ QA:
+  RMSLoginUserName: qaautoproductdiscountcampaignus@mail.rakuten.com
+  RMSLoginUserPassword: automation01
+  ShopName: qaautoproductdiscountcampaignus
+  MallLoginUserName: productdiscountmemberus
+  MallLoginUserPassword: automation01
+
+ QFE:
+  RMSLoginUserName: qfeautoproductdiscountcampaignus@mail.rakuten.com
+  RMSLoginUserPassword: automation01
+  ShopName: qfeautoproductdiscountcampaignus
+  MallLoginUserName: productdiscountmemberus
+  MallLoginUserPassword: automation01
+
+signInToRMS:
+ CampaignsDeleteList: [Product Discount Campaign create]
+
+createPreRequisites:
+  FixedNewShipOptName: CampaignFixedShippingOption
+  FixedNewShipOptRate: 10
+  FixedNewShipOptName1: ShippingCampaignShipping Option
+  FixedNewShipOptRate1: 10
+  UnfixedNewShipOptName: CampaignUnFixedShippingOption
+  UnfixedShipOptType: BoxDimension
+  
+createCampaigns:
+  CampaignEndDate: 2018/07/31
+  CampaignName: Product Discount Campaign create
+  ProductsToAdd: [prereqcampaigncreate]
+  DiscountPercent: 10
+ 
+US.productDiscountSingleFixedNonVariantMember:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: !!str 100.00
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: !!str 90.00
+  State: Florida
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: !!str 10.00
+  ProductTotal: !!str 90.00
+  CartSubtotal: !!str 90.00
+  CartTotal: !!str 100.00
+  OrderTotal: !!str 100.00
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 12/31/2099
+  cardNumber: 4444333322221111
+  ExpirationMonth: !!str 05
+  ExpirationYear: !!str 2018
+  CardHolderName: Test
+  CVVNo: 555
+  ProductNames: [Prod1C,Prod1B,ProductDiscountWithVariant,ProductDiscountNonVariant,Prod1D,Prod1A]
+  PrivateSaleProductSKU: PrivateSaleWithVariant
+
+US.productDiscountSingleFixedVariantMember:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S 
+  Variant4: M
+  ProductListPrice: !!str 200.00
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: !!str 180.00
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: !!str 10.00
+  ProductTotal: !!str 180.00
+  CartSubtotal: !!str 180.00
+  CartTotal: !!str 190.00
+  OrderTotal: !!str 190.00
+  State: Florida
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 12/31/2099
+  cardNumber: 5112002200000008
+  ExpirationMonth: !!str 04
+  ExpirationYear: !!str 2018
+  CardHolderName: Test
+  CVVNo: 555
+  PrivateSaleProductSKU: PrivateSaleWithVariant 
+
+varificationOfCreatedCampaigns:
+  ShippingCampaignName: Shipping Discount Campaign
+  PrivateSaleCampaignName: Private Sale Campaign
+  ProductDiscountCampaignName: Product Discount Campaign
+  BOGOCampaignName: BOGOCampaign
+  PointRewardCampaignName: Point Reward Campaign
+  
+verifyAddProductFunctionalityForProductsAlreadyInProdDiscount:
+  ProductTobeAddedForBOGO: ProductDiscountNonVariant
+  ProductsToAddForPointReward: PointCampaignNonVariant
+  ProductsToAddForProductDiscount: ProductDiscountNonVariant
+  AnotherBogo: AnotherBogo
+  EndDate: 2018/12/31
+  
+verifyEditCampaignPage:
+  ShippingCampaignName: Shipping Discount Campaign
+  PrivateSaleCampaignName: Private Sale Campaign
+  ProductDiscountCampaignName: Product Discount Campaign
+  BOGOCampaignName: BOGOCampaign
+  PointRewardCampaignName: Point Reward Campaign
+
+US.productSingleFixedNonVariantGuest:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: !!str 100.00
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: !!str 90.00
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: !!str 10.00
+  ShipFee: !!str 10.00
+  ProductTotal: !!str 90.00
+  CartSubtotal: !!str 90.00
+  CartTotal: !!str 100.00
+  OrderTotal: !!str 100.00
+  FirstName: Product
+  LastName: Discount
+  State: Florida 
+  City: Panama City
+  PostalCode: 32401
+  TelephoneNo: 1234567890
+  Address: Bay city
+  PaymentMethod: CC
+  EmailPart1: abc
+  EmailPart2: xyz.com
+  cardNumber: 5112002200000008
+  ExpirationMonth: !!str 04
+  ExpirationYear: !!str 2018
+  CardHolderName: Test
+  CVVNo: 555
+  CampaignEndDate: 12/31/2099
+  campaignName: Product Discount Campaign
+  
+US.productSingleFixedVariantGuest:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S 
+  Variant4: M
+  ProductListPrice: !!str 200.00
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: !!str 180.00
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: !!str 10.00
+  ShipFee: !!str 10.00
+  ProductTotal: !!str 180.00
+  CartSubtotal: !!str 180.00
+  CartTotal: !!str 190.00
+  OrderTotal: !!str 190.00
+  FirstName: Product
+  LastName: Discount
+  State: Florida 
+  City: Panama City
+  PostalCode: 32401
+  TelephoneNo: 1234567890
+  Address: Bay city
+  PaymentMethod: CC
+  EmailPart1: abc
+  EmailPart2: xyz.com
+  cardNumber: 5112002200000008
+  ExpirationMonth: !!str 04
+  ExpirationYear: !!str 2018
+  CardHolderName: Test
+  CVVNo: 555
+  CampaignEndDate: 12/31/2099
+  campaignName: Product Discount Campaign
+
+Taiwan.productDiscountSingleFixedNonVariantMember:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: 150
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: 90
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: 10
+  ProductTotal: 90
+  CartSubtotal: 90
+  CartTotal: 100
+  OrderTotal: 100
+  CVVNo: 713
+  State: 台北市
+  City: 信義區
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 31/07/2099
+  ProductSubtotal: 90
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  ProductNames: [Prod1C,Prod1B,ProductDiscountWithVariant,ProductDiscountNonVariant,Prod1D,Prod1A]
+
+Taiwan.productDiscountSingleFixedVariantMember:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S 
+  Variant4: M
+  ProductListPrice: 200
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: 180
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: 10
+  ProductTotal: 180
+  CartSubtotal: 180
+  CartTotal: 190
+  OrderTotal: 190
+  CVVNo: 713
+  State: 台北市
+  City: 信義區
+  ProductSubtotal: 180
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 31/07/2099
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  CampaignEndDate: 31/07/2099
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  
+Taiwan.productDiscountSingleUnfixedNonVariantMember:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: 100
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: 90
+  ShipOptName: CampaignUnFixedShippingOption
+  ShippingFee:  待店家確認
+  ShipFee: TBD
+  State: 台北市
+  City: 信義區
+  ProductTotal: 90
+  CartSubtotal: 90
+  CartTotal: 90
+  OrderTotal: 90
+  campaignName: Product Discount Campaign
+  ProductSubtotal: 90
+  CampaignEndDate: 31/07/2099
+Taiwan.productDiscountSingleUnfixedVariantMember:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S 
+  Variant4: M
+  ProductListPrice: 200
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: 180
+  ShipOptName: CampaignUnFixedShippingOption
+  ShippingFee: 待店家確認
+  ShipFee: TBD
+  ProductTotal: 180
+  CartSubtotal: 180
+  CartTotal: 180
+  OrderTotal: 180
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 31/07/2099
+  State: 台北市
+  City: 信義區
+  ProductSubtotal: 180
+Taiwan.productSingleFixedNonVariantGuest:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: 100
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: 90
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: 10
+  ProductTotal: 90
+  ProductSubtotal: 90
+  CartSubtotal: 90
+  CartTotal: 100
+  OrderTotal: 100
+  State: 台北市
+  City: 信義區
+  CVVNo: 713
+  FirstName: Bhavesh
+  LastName: Mehta
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  PaymentMethod: CC
+  EmailPart1: abc
+  EmailPart2: xyz.com
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  CampaignEndDate: 31/07/2099
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  ProductSubtotal: 90
+  campaignName: Product Discount Campaign
+Taiwan.productSingleFixedVariantGuest:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S 
+  Variant4: M
+  ProductListPrice: 200
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: 180
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: 10
+  ProductTotal: 180
+  CartSubtotal: 180
+  CartTotal: 190
+  OrderTotal: 190
+  ProductSubtotal: 180
+  State: 台北市
+  City: 信義區
+  CVVNo: 713
+  FirstName: Bhavesh
+  LastName: Mehta
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  PaymentMethod: CC
+  EmailPart1: abc
+  EmailPart2: xyz.com
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  CampaignEndDate: 31/07/2099
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  campaignName: Product Discount Campaign
+  
+Taiwan.productSingleUnFixedNonVariantGuest:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: 100
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: 90
+  ShipOptName: CampaignUnFixedShippingOption
+  ShippingFee: 待店家確認
+  ShipFee: TBD
+  ProductTotal: 90
+  CartSubtotal: 90
+  CartTotal: 90
+  OrderTotal: 90
+  State: 台北市
+  City: 信義區
+  CVVNo: 713
+  FirstName: Bhavesh
+  LastName: Mehta
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  PaymentMethod: CC
+  EmailPart1: abc
+  EmailPart2: xyz.com
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  CampaignEndDate: 31/07/2099
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  campaignName: Product Discount Campaign
+  ShippingFeeOrderDetail: TBD
+  ProductSubtotal: 90
+  
+Taiwan.productVariantUnFixedGuest:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S 
+  Variant4: M
+  ProductListPrice: 200
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: 180
+  ShipOptName: CampaignUnFixedShippingOption
+  ShippingFee: 待店家確認
+  ShipFee: TBD
+  ProductTotal: 180
+  CartSubtotal: 180
+  CartTotal: 180
+  OrderTotal: 180
+  FirstName: Bhavesh
+  LastName: Mehta
+  State: 台北市
+  City: 信義區
+  CVVNo: 713
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  PaymentMethod: CC
+  EmailPart1: abc
+  EmailPart2: xyz.com
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  CampaignEndDate: 31/07/2099
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  campaignName: Product Discount Campaign
+  ShippingFeeOrderDetail: TBD
+  ProductSubtotal: 180
+
+Taiwan.productDiscountMultipleProductFixedMember:
+  ProductDisProd1: ProductDiscountNonVariant
+  OrderDisProd1: orderdiscountprod1
+  OrderDisProd2: orderdiscountprod2
+  BaseSKUList: [ProductDiscountNonVariant,orderdiscountprod1,orderdiscountprod2]
+  UpdatedBaseSKUList: [orderdiscountprod1,orderdiscountprod2]
+  UnitPriceList: 90,400,600
+  UpdatedUnitPriceList: 400,600
+  ProductTotalList: 90,280,420
+  UpdatedProductTotalList: 280,420
+  QuantityList: 1,1,1
+  UpdatedQuantityList: 1,1
+  ProductQuantity: 2
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: 180
+  ShipOptName: CampaignFixedShippingOption
+  ShippingFee: 20
+  CartSubtotal: 790
+  UpdatedCartSubtotal: 700
+  CartTotal: 790
+  UpdatedCartTotal: 700
+  EarnedPoints: 6
+  UpdatedEarnedPoints: 6
+  OrderTotal: 790
+  State: 台北市
+  City: 信義區
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  CampaignEndDate: 31/07/2099
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  TelephoneNo: 9876543210
+  Address: Datong Street,Taiwan
+  State: 台北市
+  City: 信義區
+  PostalCode: 123456
+  CVVNo: 713
+
+
+Taiwan.productDiscountMultipleProductUnFixedMember:
+  ProductSKU1: ProductDiscountNonVariant
+  ProductSKU2: ProductDiscountWithVariant
+  BaseSKUList: [ProductDiscountWithVariant, ProductDiscountNonVariant]
+  UnitPriceList: 180;90
+  ProductTotalList: 180;90
+  QuantityList: 1,1
+  ShipOptName: CampaignUnFixedShippingOption
+  ShippingFee: 待店家確認
+  CartSubtotal: 270
+  CartTotal: 270
+  OrderTotal: 270
+  State: 台北市
+  City: 信義區
+  ProductQuantity: 2
+
+Taiwan.verifyProductDiscount:
+ ProductSKU1: Prod1A
+ ProductSKU2: Prod1B
+ ProductSKU3: Prod1C
+ CampaignName: Product Discount Campaign
+ CampaignApplied: 商品折扣已套用
+ UnitPriceA: 270  
+ ProdTotalA: 270  
+ CartTotal: 720 
+ CartSubTotal: 720
+ UnitPriceB: 270  
+ ProdTotalB: 270
+ UnitPriceC: 180  
+ ProdTotalC: 180
+ TotalPoints: 5
+ qty: 2 
+ ProductTotalupdateA: 540 
+ ProductTotalupdateB: 540 
+ ProductTotalupdateC: 360 
+ CartTotalUpdate: 1,440
+ CartsubTotalUpdate: 1,440  
+ TotalPointsupdate: 13
+ ProductSKU4: Prod1D
+ UnitPriceD: 270
+ ProductTotalD: 270
+ CartTotalAddD: 1,710 
+ CartsubTotalAdd: 1,710
+ 
+US.verifyProductDiscount:
+ ProductSKU1: Prod1A
+ ProductSKU2: Prod1B
+ ProductSKU3: Prod1C
+ CampaignName: Product Discount Campaign
+ CampaignApplied: Product Discount
+ UnitPriceA: 270.00
+ ProdTotalA: 270.00
+ CartTotal: 720.00
+ CartSubTotal: 720.00
+ UnitPriceB: 270.00
+ ProdTotalB: 270.00
+ UnitPriceC: 180.00
+ ProdTotalC: 180.00
+ TotalPoints: 720
+ qty: 2
+ ProductTotalupdateA: 540.00 
+ ProductTotalupdateB: 540.00
+ ProductTotalupdateC: 360.00
+ CartTotalUpdate: 1,440.00
+ CartsubTotalUpdate: 1,440.00  
+ TotalPointsupdate: 1,440
+ ProductSKU4: Prod1D
+ UnitPriceD: 270.00
+ ProductTotalD: 270.00
+ CartTotalAddD: 1,710.00
+ CartsubTotalAdd: 1,710.00 
+  
+Taiwan.productDiscWithInternationalShipping:
+ ProductSKU: Prod1D 
+ CampaignName: Product Discount Campaign
+ CampaignApplied: 商品折扣已套用 
+ country: 澳洲
+ postal: 358
+ address: Address123
+ telephoneNumber: 1234567898
+ quantity: 1
+ subtotal: 270
+ shipFee: 50
+ orderTotal: 320
+ cardNumber: 4938170100001213
+ ExpirationMonth: !!str 12
+ ExpirationYear: !!str 2019
+ CardHolderName: RAKUTEN
+ MallLoginUserName: prodcamptw
+ MallLoginUserPassword: automation01
+ CVVNo: 555
+ Address: address billing
+ PostalCode: 358
+ State: 新北市
+ City: 萬里區
+ socialSecurityNumberTW: A123456789
+ Day: !!str 12
+ Month: !!str 12
+ Year: !!str 1988
+ MobileNo: 8989898989
+ TelephoneNo: 9876543210
+ ShippingAddress: 澳洲 
+ orderstatus: 待配送
+ ShippingOption: InternationalShippingOption
+ paymentMethod: 信用卡付款
+ 
+Taiwan.verifySaleIcon:
+ ProductSKU: Prod1D
+ campaignTag: 特價 
+ 
+US.verifySaleIcon:
+ ProductSKU: Prod1D
+ campaignTag: SALE
+  
+Taiwan.orderOfProductPriceZero:
+ ProductSKU: MinimumPrice
+ ProductUnitPrice: 0
+ ProductListPrice: 1
+ ProductName: MinimumPrice
+ ShipOptName: CampaignFixedShippingOption
+ State: 台北市
+ City: 信義區
+ ShippingFee: 10
+ ProductTotal: 0
+ CartTotal: 10
+ CartSubtotal: 0
+ ProductQuantity: 1
+ cardNumber: 4938170100001213
+ ExpirationMonth: !!str 12
+ ExpirationYear: !!str 2019
+ CardHolderName: RAKUTEN
+ socialSecurityNumberTW: A123456789
+ Day: !!str 12
+ Month: !!str 12
+ Year: !!str 1988
+ MobileNo: 8989898989
+ TelephoneNo: 9876543210
+ CVVNo: 713
+ Address: Datong Street,Taiwan
+ PostalCode: 32401
+ State: 台北市
+ City: 信義區
+ 
+ 
+US.orderOfProductPriceZero:
+ ProductSKU: MinimumPrice
+ ProductUnitPrice: 0.01
+ ProductListPrice: 1.00
+ ProductName: MinimumPrice
+ ShipOptName: CampaignFixedShippingOption
+ State: Florida
+ ShippingFee: 10.00
+ ProductTotal: 0.01
+ CartTotal: 10.01
+ CartSubtotal: 0.01
+ ProductQuantity: 1
+ cardNumber: 5112002200000008
+ ExpirationMonth: !!str 04
+ ExpirationYear: !!str 2018
+ CardHolderName: Test
+ CVVNo: 555
+
+QA.Taiwan.verifyProductPrice:
+ ProductSKU: TestProduct01
+ MallLoginUserName: prodcamptw
+ MallLoginUserPassword: automation01
+ ProductPrice: 3
+ MallTopPageSelectCategoryByValue: 345
+ CategoryName: fruits
+ ProductName: TestProduct01
+ ListPrice: 300
+ 
+US.verifyProductPrice:
+ ProductSKU: TestProduct01
+ MallLoginUserName: productdiscountmemberus
+ MallLoginUserPassword: automation01
+ ProductPrice: 3.00
+ MallTopPageSelectCategoryByValue: 3
+ CategoryName: Antennas
+ ProductName: TestProduct01
+
+QFE.Taiwan.verifyProductPrice:
+ ProductSKU: TestProd01
+ MallLoginUserName: prodcamptw
+ MallLoginUserPassword: automation01
+ ProductPrice: 3
+ MallTopPageSelectCategoryByValue: 345
+ CategoryName: 手創包包
+ ProductName: TestProduct01
+ ListPrice: 300
+
+Taiwan.verifyOrderTotalGreaterthanZeroForFreeShipProd:
+ ProductSKU: FreeShippingOther
+ ShipOptName: CampaignFixedShippingOption
+ ShippingFee: 0
+ ProductUnitPrice: 50
+ ProductTotal: 50
+ CartTotal: 50
+ CartSubtotal: 50
+ OrderTotal: 50
+ ProductQuantity: 1
+ State: 台北市
+ City: 信義區
+ campaignName: ProductDiscountPriceAfterDiscount
+ 
+Taiwan.verifyErrorMsgWithMinimumPriceFreeShipping: 
+ ProductSKU: MinimumPriceFreeShipping 
+ ShipOptName: CampaignFixedShippingOption
+ ShippingFee: 0
+ ProductQuantity: 1
+ CartSubtotal: 0
+ CartTotal: 0
+ State: 台北市
+ City: 信義區
+ cardNumber: 4938170100001213
+ ExpirationMonth: !!str 12
+ ExpirationYear: !!str 2019
+ CardHolderName: RAKUTEN
+ CampaignEndDate: 31/07/2099
+ socialSecurityNumberTW: A123456789
+ Day: !!str 12
+ Month: !!str 12
+ Year: !!str 1988
+ MobileNo: 8989898989
+ TelephoneNo: 9876543210
+ Address: Datong Street,Taiwan
+ PostalCode: 123456
+ CVVNo: 713
+
+Taiwan.verifyFutureCampaignsNotDisplayed:
+ ProductSKU: BOGONonVariant
+ BOGO: BOGOCAMPAIGN
+ ProductPrice: 100
+ 
+US.productDiscountSinglePredefinedNonVariantMember:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: !!str 100.00
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: !!str 90.00
+  State: Florida
+  ShipOptName: Two day
+  ShippingFee: !!str 15.00
+  ProductTotal: !!str 90.00
+  CartSubtotal: !!str 90.00
+  CartTotal: !!str 105.00
+  OrderTotal: !!str 105.00
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 12/31/2099
+  cardNumber: 5112002200000008
+  ExpirationMonth: !!str 04
+  ExpirationYear: !!str 2018
+  CardHolderName: Test
+  CVVNo: 555
+  
+Taiwan.productDiscountSinglePredefinedNonVariantMember:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: 100
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: 90
+  ShipOptName: AutoFixedPredefinedShipOptCampaigns_DontDelete
+  ShippingFee: 10
+  ProductTotal: 90
+  CartSubtotal: 90
+  CartTotal: 100
+  OrderTotal: 100
+  CVVNo: 713
+  State: 台北市
+  City: 信義區
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 31/07/2099
+  ProductSubtotal: 90
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  
+US.productDiscountSinglePredefinedVariantMember:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S 
+  Variant4: M
+  ProductListPrice: !!str 200.00
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: !!str 180.00
+  ShipOptName: Two day
+  ShippingFee: !!str 15.00
+  ProductTotal: !!str 180.00
+  CartSubtotal: !!str 180.00
+  CartTotal: !!str 195.00
+  OrderTotal: !!str 195.00
+  State: Florida
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 12/31/2099
+  cardNumber: 5112002200000008
+  ExpirationMonth: !!str 04
+  ExpirationYear: !!str 2018
+  CardHolderName: Test
+  CVVNo: 555
+  
+Taiwan.productDiscountSinglePredefinedVariantMember:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S 
+  Variant4: M
+  ProductListPrice: 200
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: 180
+  ShipOptName: AutoFixedPredefinedShipOptCampaigns_DontDelete
+  ShippingFee: 10
+  ProductTotal: 180
+  CartSubtotal: 180
+  CartTotal: 190
+  OrderTotal: 190
+  CVVNo: 713
+  State: 台北市
+  City: 信義區
+  ProductSubtotal: 180
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 31/07/2099
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  CampaignEndDate: 31/07/2099
+  socialSecurityNumberTW: A123456789
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+
+productSinglePredefinedNonVariantUnfixedGuest:
+  ProductSKU: ProductDiscountNonVariant
+  ProductListPrice: 100
+  ProductQuantity: 1
+  ProductName: ProductDiscountNonVariant
+  ProductUnitPrice: 90
+  ShipOptName: AutoFixedPredefinedShipOptCampaigns_DontDelete
+  ShippingFee: 10
+  ProductTotal: 90
+  CartSubtotal: 90
+  CartTotal: 100
+  OrderTotal: 100
+  CVVNo: 713
+  State: 台北市
+  City: 信義區
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 31/07/2099
+  ProductSubtotal: 90
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  socialSecurityNumberTW: A123456789
+  LastName: Cybage
+  FirstName: Automation
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  EmailPart1: abc
+  EmailPart2: xyz.com
+
+productVariantUnFixedPredefinedGuest:
+  ProductSKU: ProductDiscountWithVariant
+  ProductSKU1: ProductDiscountWithVariant_2_1
+  ProductSKU2: ProductDiscountWithVariant_1
+  Variant1: Red
+  Variant2: Blue
+  Variant3: S
+  Variant4: M
+  ProductListPrice: 200
+  ProductQuantity: 1
+  ProductName: ProductDiscountWithVariant
+  ProductUnitPrice: 180
+  ShipOptName: AutoFixedPredefinedShipOptCampaigns_DontDelete
+  ShippingFee: 10
+  ProductTotal: 180
+  CartSubtotal: 180
+  CartTotal: 190
+  OrderTotal: 190
+  CVVNo: 713
+  State: 台北市
+  City: 信義區
+  campaignName: Product Discount Campaign
+  CampaignEndDate: 31/07/2099
+  ProductSubtotal: 90
+  cardNumber: 4938170100001213
+  ExpirationMonth: !!str 12
+  ExpirationYear: !!str 2019
+  CardHolderName: RAKUTEN
+  socialSecurityNumberTW: A123456789
+  LastName: Cybage
+  FirstName: Automation
+  Day: !!str 12
+  Month: !!str 12
+  Year: !!str 1988
+  MobileNo: 8989898989
+  Address: Datong Street,Taiwan
+  PostalCode: 123456
+  TelephoneNo: 9876543210
+  EmailPart1: abc
+  EmailPart2: xyz.com
