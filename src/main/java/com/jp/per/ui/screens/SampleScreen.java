@@ -1,4 +1,4 @@
-package com.jp.dpd.ui.screens;
+package com.jp.per.ui.screens;
 
 public class SampleScreen {
 
